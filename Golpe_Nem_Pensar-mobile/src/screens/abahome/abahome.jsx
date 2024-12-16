@@ -1,12 +1,36 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, View, TouchableOpacity } from "react-native";
 import { styles } from "./abahome.style.js";
 import { materiais } from "../../constants/data.js";
 import Materiais from "../../components/materiais/materiais.jsx";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/auth.js";
+import {Alert} from "react-native";
 
 function Abahome(props) {
-    //funão que lida com a navegação dinâmica
-    function ClickMateriais(screenName){
+    const { setUser } = useContext(AuthContext);
+
+    // Função que lida com a navegação dinâmica
+    function ClickMateriais(screenName) {
         props.navigation.navigate(screenName);
+    }
+
+    function Logout() {
+        // Exibe o alerta de confirmação
+        Alert.alert(
+            "Sair", // Título do alerta
+            "Tem certeza que deseja sair?", // Mensagem
+            [
+                {
+                    text: "Cancelar", // Opção para cancelar
+                    style: "cancel",
+                },
+                {
+                    text: "OK", // Opção para confirmar
+                    onPress: () => setUser({}), // Ação de logout
+                },
+            ],
+            { cancelable: false } // Não permite fechar clicando fora da caixa
+        );
     }
 
     return (
@@ -26,11 +50,18 @@ function Abahome(props) {
                     <Materiais 
                         title={item.title} 
                         icon={item.icon} 
-                        onPress={() => ClickMateriais(item.screen)}//passa o nome da tela 
+                        onPress={() => ClickMateriais(item.screen)} // Passa o nome da tela
                     />
-                    
                 )}
             />
+
+            {/* Botão de Desconectar usando TouchableOpacity */}
+            <TouchableOpacity
+                style={styles.button} // Estilos do botão, se necessário
+                onPress={Logout}
+            >
+                <Text style={styles.buttonText}>Sair</Text>
+            </TouchableOpacity>
         </View>
     );
 }

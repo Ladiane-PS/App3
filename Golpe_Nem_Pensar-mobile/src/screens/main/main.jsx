@@ -5,6 +5,7 @@ import Curiosidades from "../Curiosidades/curiosidades.jsx";
 import Quiz from "../Quiz/quiz.jsx";
 import icon from "../../constants/icon.js";
 
+
 const Tab = createBottomTabNavigator();
 
 function Main (){
