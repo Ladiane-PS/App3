@@ -1,15 +1,18 @@
 import { COLORS } from '../constants/theme.js';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Main from "../screens/main/main.jsx";
-import AtaqueDirecionado from "../screens/AtaqueDirecionado/ataquedirecionado.jsx";
-import ComercioEletronico from "../screens/ComercioEletronico/comercioeletronico.jsx";
-import CopiaSeguranca from "../screens/CopiaSeguranca/copiaseguranca.jsx";
-import DispositivosMovel from "../screens/DispositivosMovel/dispositivomovel.jsx";
-import EngenhariaSocial from "../screens/EngenhariaSocial/engenhariasocial.jsx";
-import Phishing from "../screens/Phishing/phishing.jsx";
-import RedesSociais from "../screens/RedesSociais/redessociais.jsx";
-import Senha from "../screens/Senha/senha.jsx";
-import Spam from "../screens/Spam/spam.jsx";
+import Proteger from '../screens/Proteger/proteger.jsx';
+import Pretexting from '../screens/Pretexting/pretexting.jsx';
+import QuidProQuo from '../screens/QuidProQuo/quidproquo.jsx';
+import Watering from '../screens/Watering/watering.jsx';
+import EngenhariaSocial from '../screens/EngenhariaSocial/engenhariasocial.jsx';
+import Phishing from '../screens/Phishing/phishing.jsx';
+import Tailgating from '../screens/Tailgating/tailgating.jsx';
+import Scareware from '../screens/Scareware/scareware.jsx';
+import Baiting from '../screens/Baiting/baiting.jsx';
+
+
+
 
 
 const Stack = createNativeStackNavigator();
@@ -21,8 +24,8 @@ function RoutesPrivate() {
                 headerShown: false
         }}/>
        
-       <Stack.Screen name="ataquedirecionado" component={AtaqueDirecionado} options={{
-           headerTitle: "Ataque Direcionado",
+       <Stack.Screen name="proteger" component={Proteger} options={{
+           headerTitle: "Proteger",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,
@@ -30,9 +33,17 @@ function RoutesPrivate() {
                 backgroundColor: COLORS.green
            }
         }}/>
-
-        <Stack.Screen name="comercioeletronico" component={ComercioEletronico} options={{
-           headerTitle: "Cormércio Eletrônico",
+        <Stack.Screen name="baiting" component={Baiting } options={{
+           headerTitle: "Baiting",
+           headerTitleAlign: "center",
+           headerShadowVisible: false,
+           headerTintColor: COLORS.white,
+           headerStyle: {
+                backgroundColor: COLORS.green
+          }
+        }}/>
+        <Stack.Screen name="pretexting" component={Pretexting} options={{
+           headerTitle: "Pretexting",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,
@@ -40,18 +51,8 @@ function RoutesPrivate() {
                 backgroundColor: COLORS.green
            }
         }}/>
-
-        <Stack.Screen name="copiaseguranca" component={CopiaSeguranca} options={{
-           headerTitle: "Cópia de segurança",
-           headerTitleAlign: "center",
-           headerShadowVisible: false,
-           headerTintColor: COLORS.white,
-           headerStyle: {
-                backgroundColor: COLORS.green
-           }
-        }}/>
-        <Stack.Screen name="dispositivosmovel" component={DispositivosMovel} options={{
-           headerTitle: "Dispositivos Móvel",
+        <Stack.Screen name="quidproquo" component={QuidProQuo} options={{
+           headerTitle: "Quid Pro Quo",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,
@@ -77,8 +78,8 @@ function RoutesPrivate() {
                 backgroundColor: COLORS.green
            }
         }}/>
-        <Stack.Screen name="redessociais" component={RedesSociais} options={{
-           headerTitle: "Redes Sociais",
+        <Stack.Screen name="scareware" component={Scareware} options={{
+           headerTitle: "Scareware",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,
@@ -86,8 +87,8 @@ function RoutesPrivate() {
                 backgroundColor: COLORS.green
            }
         }}/>
-        <Stack.Screen name="senha" component={Senha} options={{
-           headerTitle: "Senha",
+        <Stack.Screen name="tailgating" component={Tailgating} options={{
+           headerTitle: "Tailgating",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,
@@ -95,8 +96,8 @@ function RoutesPrivate() {
                 backgroundColor: COLORS.green
            }
         }}/>
-        <Stack.Screen name="spam" component={Spam} options={{
-           headerTitle: "Spam",
+        <Stack.Screen name="watering" component={Watering} options={{
+           headerTitle: "Watering",
            headerTitleAlign: "center",
            headerShadowVisible: false,
            headerTintColor: COLORS.white,

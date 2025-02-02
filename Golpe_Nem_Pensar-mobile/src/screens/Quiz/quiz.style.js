@@ -1,38 +1,52 @@
 import { COLORS, FONT_SIZE } from "../../constants/theme.js";
 
 export const styles = {
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      padding: 20,
-      backgroundColor: '#E3F2FD',
-    },
-    pergunta: {
-      marginBottom: 20,
-    },
-    resultado: {
-      alignItems: 'center',
-    },
-    title: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      marginBottom: 20,
-      textAlign: 'center',
-    },
-    content: {
-      fontSize: 18,
-      marginBottom: 20,
-      textAlign: 'center',
-    },
-    botaoResposta: {
-      backgroundColor: '#BBDEFB',
-      padding: 15,
-      marginVertical: 8,
-      borderRadius: 5,
-    },
-    textoResposta: {
-      fontSize: 16,
-      color: '#0D47A1',
-      textAlign: 'center',
-    },
-  };
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLORS.greenclaro 
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 10
+  },
+  pergunta: {
+    width: '100%',
+    alignItems: 'center'
+  },
+  botaoResposta: {
+    width: '100%',
+    padding: 15,
+    backgroundColor: COLORS.blue,
+    borderRadius: 5,
+    marginVertical: 5,
+    alignItems: 'center'
+  },
+  textoResposta: {
+    color: COLORS.white,
+    fontSize: 16
+  },
+  feedback: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 10
+  },
+  feedbackAcerto: {
+    color: COLORS.green
+  },
+  feedbackErro: {
+    color: COLORS.red
+  },
+  respostaCorreta: {
+    backgroundColor: COLORS.green
+  },
+  respostaErrada: {
+    backgroundColor: COLORS.red
+  },
+  resultado: {
+    alignItems: 'center'
+  }
+};

@@ -33,7 +33,18 @@ export const styles = {
     fontSize: FONT_SIZE.sm, // Fonte pequena
     color: COLORS.black, // Texto preto
     marginBottom: 8, // Espaço entre parágrafos
+    textAlign: "justify",
   },
+ /* image: {
+    width: "100%", // usar toda a  largura disponível
+    height: 250, // Altura da imagem
+    borderRadius: 5, // Cantos arredondados
+  }, 
+    imageContainer: {
+    alignItems: "center", // Centraliza a imagem
+    marginBottom: 20,
+    resizeMode: "contain", //Garante que toda a imagem apareça
+  },*/
   link: {
     fontSize: FONT_SIZE.sm, // Fonte pequena
     color: COLORS.blue, // Link azul para destacar

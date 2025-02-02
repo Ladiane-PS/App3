@@ -1,12 +1,13 @@
-import { StyleSheet } from 'react-native';
+//import { StyleSheet } from 'react-native';
+import { COLORS, FONT_SIZE } from "../../constants/theme.js";
 
-export const styles = StyleSheet.create({
+export const styles = {
   container: {
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#F3E5F5',
+    backgroundColor: COLORS.greenclaro,
   },
   title: {
     fontSize: 24,
@@ -14,16 +15,23 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 15,
-    color: '#4A148C',
-  },
   content: {
     fontSize: 16,
     textAlign: 'left',
-    color: '#333',
+    color: COLORS.black,
     marginBottom: 10,
+    backgroundColor: COLORS.white,
+    padding: 15,
+    borderRadius:10,
+    borderWidch:1,
+    bordercolor: COLORS.black,
+    textAlign: "justify",
   },
-});
+  link: {
+    fontSize: FONT_SIZE.sm, // Fonte pequena
+    color: COLORS.blue, // Link azul para destacar
+    textDecorationLine: "underline", // Sublinhado
+    marginBottom: 10, // Espaço inferior
+    textAlign: "justify",
+  },
+};

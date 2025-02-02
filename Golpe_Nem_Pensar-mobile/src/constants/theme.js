@@ -8,7 +8,9 @@ const COLORS = {
     grey1: "#E4E4E4",
     grey2: "#a0a0a0",
     blue: "#1b7ced",
-    red: "#FF0000"
+    blue1: "#BBDEFB",
+    red: "#FF0000",
+    greenclaro: "#E5F5E8"
 
 };
 

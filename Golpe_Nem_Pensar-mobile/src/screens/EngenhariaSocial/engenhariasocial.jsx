@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Linking } from "react-native";
+import { View, Text, ScrollView, Linking, Image } from "react-native";
 import { WebView } from 'react-native-webview'; // Para exibir o vídeo
 import { styles } from "./engenhariasocial.style.js"; // Importando estilos
 
@@ -8,7 +8,7 @@ function abrirLink(url) {
 
 function EngenhariaSocial() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container}contentContainerStyle={{ flexGrow: 1 ,paddingBottom: 50}}>
       <Text style={styles.header}>Engenharia Social</Text>
       <Text style={styles.subHeader}>
         Aprenda a se proteger contra golpes e manipulações digitais!
@@ -26,12 +26,19 @@ function EngenhariaSocial() {
       {/* Seção de Texto Explicativo */}
       <View style={styles.textContainer}>
         <Text style={styles.text}>
-          A engenharia social é uma técnica utilizada para manipular as pessoas e induzi-las a revelar informações confidenciais. 
-          Ela explora a confiança, curiosidade ou medo das vítimas para obter dados sensíveis.
+        Definição de Engenharia Social: A engenharia social pode ser definida como a manipulação de pessoas para revelar
+        informações confidenciais ou realizar ações que ameacem a segurança de um sistema de informação.
+        
         </Text>
+         
 
         <Text style={styles.text}>
-          Quer saber mais? Confira os seguintes artigos:
+        A engenharia social se baseia na manipulação e persuasão, induzindo a vítima a acreditar em uma falsa identidade ou situação, 
+        permitindo que o engenheiro social obtenha informações ou vantagens, com ou sem o uso de tecnologia (MITNICK e SIMON, 2003).
+        </Text>
+        
+        <Text style={styles.text}>
+          Quer saber mais? Confira :
         </Text>
 
         <Text 
@@ -42,8 +49,8 @@ function EngenhariaSocial() {
 
         <Text 
           style={styles.link} 
-          onPress={() => abrirLink('https://www.cert.br/artigos/engenharia-social/')}>
-          Artigo sobre Engenharia Social - CERT.br
+          onPress={() => abrirLink('https://www.ibm.com/br-pt/topics/social-engineering')}>
+          O que e Engenharia Social? - IBM
         </Text>
       </View>
     </ScrollView>
@@ -51,3 +58,7 @@ function EngenhariaSocial() {
 }
 
 export default EngenhariaSocial;
+//{/* Adicionando Imagem Local */}
+/*<View style={styles.imageContainer}>
+<Image source={require("../../../assets/e.jpg")} style={styles.image} />
+</View>*/

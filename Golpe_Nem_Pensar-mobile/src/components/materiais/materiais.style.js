@@ -19,12 +19,12 @@ export const styles = {
         elevation: 10, // Sombra para Android; valor muito alto deixaria a sombra exagerada
     },
     icon: {
-        width: 70, // Largura do ícone definida em 50px
-        height: 70, // Altura do ícone definida em 50px
+        width: 101, // Largura do ícone definida em 50px
+        height: 75, // Altura do ícone definida em 50px
         marginBottom: 5, // Espaço inferior de 8px abaixo do ícone
     },
     title: {
-        fontSize: 12, // Tamanho da fonte do título em 14px
+        fontSize: 11, // Tamanho da fonte do título em 14px
         textAlign: "center", // Alinha o texto no centro horizontalmente
         color: COLORS.black, // Cor do texto definida como branco
     },
